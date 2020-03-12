@@ -1,0 +1,15 @@
+version: '3'
+services: 
+    php:
+        image: sand-php
+        volumes: 
+            - ./:/app
+        working_dir: /app
+    web:
+        image: sand-nginx
+        volumes: 
+            - ./:/app
+        depends_on: 
+            - php
+        ports: 
+            - 80:80
