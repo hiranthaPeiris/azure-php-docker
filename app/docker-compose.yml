@@ -9,7 +9,8 @@ services:
         image: sand-nginx
         volumes: 
             - ./:/app
+            - /data/certs:/etc/nginx/certs
         depends_on: 
             - php
         ports: 
-            - 80:80
+            - 443:443
