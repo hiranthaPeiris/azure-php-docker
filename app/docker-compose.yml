@@ -12,5 +12,6 @@ services:
             - ./data/certs:/etc/nginx/certs
         depends_on: 
             - php
-        ports: 
+        ports:
+            - 80:80 
             - 443:443
